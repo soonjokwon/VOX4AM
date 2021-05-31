@@ -8,15 +8,14 @@
 - HDF5 Library 1.12  or higher for writing HDF files
 ## Build the software
 - Install the prerequisites listed above.
-- Unzip 'HDF5Lib.zip' to the same folder.
-- Open 'VOX4AM.sln' and check the additional include and library directories. CGAL_PATH, BOOST_PATH, HDF_PATH must be adjusted to your local environment.
+- Open 'VOX4AM.sln' and check the additional include and library directories (CGAL_PATH, BOOST_PATH, HDF_PATH must be adjusted to your local environment)
   - Additional include directories
     - CGAL_PATH\include
     - CGAL_PATH\auxiliary\gmp\include
     - BOOST_PATH\
     - HDF_PATH\src
     - HDF_PATH\build
-      - You must build HDF5 using CMake in this directory
+      - You must build HDF5 first using CMake in this directory
   - Additional library directories
     - CGAL_PATH\auxiliary\gmp\lib
       - libmpfr-4.lib, libgmp-10.lib
@@ -25,15 +24,15 @@
     - HDF_PATH\build\Release
       - libhdf5.lib
 ## Usage
-- VOX4AM is a command line software that requires a set of parameters as follows
+- VOX4AM is a command line software that requires a set of arguments as follows
   - VOX4AM.exe [folder_path] [obj_size] [dimension_size] [voxel_size] [num_inside]
-    - folder_path: The path where OBJ files are located. Note that obj file names must be numbers.
-      - e.g. For 500 objs, the names must be 1.obj,2.obj,..,500.obj.
-    - obj_size: The number of obj files at the path.
-    - dimension_size: The size of dimension along one side of the build space.
-    - voxel_size: The size of a unit voxel.
-    - num_inside: The number representing the complete inside of the model.
-      - The numbers representing outside and boundary are 0 and 1.
+    - folder_path: The path where OBJ files are located. Note that obj file names must be numbers
+      - e.g. For 500 objs, the names must be 1.obj,2.obj,..,500.obj
+    - obj_size: The number of obj files at the path
+    - dimension_size: The size of dimension along one side of the build space
+    - voxel_size: The size of a unit voxel
+    - num_inside: The number representing the complete inside of the model
+      - The numbers representing outside and boundary are 0 and 1
 ## Contact Information
 - Soonjo Kwon, soonjo.kwon.1@gmail.com
 ## Version
