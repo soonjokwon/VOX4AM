@@ -1,6 +1,6 @@
 # 3D Voxelizer for Additive Manufacutring (VOX4AM)
 - Voxelizer for Additive Manufacutring (VOX4AM) was developed to generate voxelization data for training 3D convolutional neural network (CNN) models that estimate build time for AM or 3D printing. VOX4AM gets more than one mesh files as OBJ format (.obj) and produces a single Hierarchical Data Format (HDF) file (.h5) that consists of an 1D array of 0 and 1 values. The array should be resized when imported in your application.
-- Unlike other conventional voxelizers, VOX4AM takes the build space into consideration because the volume ratio between a mesh model and a build space is a factor that affcts the build time. 
+- Unlike other conventional 3D model voxelizers, VOX4AM takes the build space into consideration because the volume ratio between a mesh model and a build space is a factor that affcts the build time. 
 - The software was written in C++.
 ![Fig 4](https://user-images.githubusercontent.com/67339153/120209624-dcff3700-c269-11eb-933a-4064a32ef2f8.jpg)
 ## Prerequisites
@@ -31,11 +31,13 @@
   ```
   VOX4AM.exe [folder_path] [obj_size] [dimension_size] [voxel_size] [num_inside]
   ```
-    - folder_path: The path where OBJ files are located. Note that obj file names must be numbers
-      - e.g. For 500 obj files, the names must be 1.obj,2.obj,..,500.obj
-    - obj_size: The number of obj files at the path
-    - dimension_size: The size of dimension along one side of the build space (width, length, height)
+    - folder_path: The path where OBJ files are located
+    - obj_size: The number of obj files at the given path
+      - Note that obj file names must be numbers. If there are 500 obj files, the obj file names **MUST** be 1.obj,2.obj,..,500.obj
+    - dimension_size: The size of dimension along one side of the build space
+      - This value will be set to width, length, height
     - voxel_size: The size of a unit voxel
+      - If voxel_size is 3 and dimension_size is 300, the number of voxels along one side will be 100
     - num_inside: The number representing the complete inside of the 3D model (usually 1 but can be changed)
       - The numbers representing outside and boundary of the 3D model are 0 and 1
 ## Contact Information
