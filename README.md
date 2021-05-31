@@ -1,7 +1,8 @@
 # 3D Voxelizer for Additive Manufacutring (VOX4AM)
-- Voxelizer for Additive Manufacutring (VOX4AM) was developed to generate voxelization data for training 3D convolutional neural network (CNN) models that estimate build time for AM or 3D printing. VOX4AM gets more than one mesh files as OBJ format (.obj) and produces a single Hierarchical Data Format (HDF) file (.h5). 
+- Voxelizer for Additive Manufacutring (VOX4AM) was developed to generate voxelization data for training 3D convolutional neural network (CNN) models that estimate build time for AM or 3D printing. VOX4AM gets more than one mesh files as OBJ format (.obj) and produces a single Hierarchical Data Format (HDF) file (.h5) that consists of an 1D array of 0 and 1 values. The array should be resized when imported.
 - Unlike other conventional voxelizers, VOX4AM takes the build space into consideration because the volume ratio between a mesh model and a build space is a factor that affcts the build time. 
 - The software was written in C++.
+![Fig 4](https://user-images.githubusercontent.com/67339153/120209624-dcff3700-c269-11eb-933a-4064a32ef2f8.jpg)
 ## Prerequisites
 - [Boost C++ Libraries](https://www.boost.org/) 1.74 or higher
 - [The Computational Geometry Algorithms Library (CGAL)](https://www.cgal.org/download.html) 5.1 or higher for processing mesh files
@@ -33,12 +34,13 @@
     - folder_path: The path where OBJ files are located. Note that obj file names must be numbers
       - e.g. For 500 obj files, the names must be 1.obj,2.obj,..,500.obj
     - obj_size: The number of obj files at the path
-    - dimension_size: The size of dimension along one side of the build space
+    - dimension_size: The size of dimension along one side of the build space (width, length, height)
     - voxel_size: The size of a unit voxel
-    - num_inside: The number representing the complete inside of the 3D model
+    - num_inside: The number representing the complete inside of the 3D model (usually 1 but can be changed)
       - The numbers representing outside and boundary of the 3D model are 0 and 1
 ## Contact Information
-- Soonjo Kwon, soonjo.kwon.1@gmail.com
+- Soonjo Kwon, soonjo.kwon@kumoh.ac.kr
+- Yosep Oh, yosep.oh@kyonggi.ac.kr
 ## Version
 - 1.0
 ## Reference
