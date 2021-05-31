@@ -27,11 +27,13 @@
 ## Usage
 - VOX4AM is a command line software that requires a set of parameters as follows
   - VOX4AM.exe [folder_path] [obj_size] [dimension_size] [voxel_size] [num_inside]
-    - folder_path: The path where OBJ files are located. Note that obj file names must be numbers (1.obj, 2.obj, ...).
+    - folder_path: The path where OBJ files are located. Note that obj file names must be numbers.
+      - e.g. For 500 objs, the names must be 1.obj,2.obj,..,500.obj.
     - obj_size: The number of obj files at the path.
-    - dimension_size: The size of dimension along one side.
+    - dimension_size: The size of dimension along one side of the build space.
     - voxel_size: The size of a unit voxel.
-    - num_inside: The number representing the complete inside of the model. Note that outside and boundary are represented 0 and 1.
+    - num_inside: The number representing the complete inside of the model.
+      - The numbers representing outside and boundary are 0 and 1.
 ## Contact Information
 - Soonjo Kwon, soonjo.kwon.1@gmail.com
 ## Version
