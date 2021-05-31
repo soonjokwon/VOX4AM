@@ -36,7 +36,7 @@
       - Note that obj file names must be numbers
         - If there are 500 obj files, the obj file names **MUST** be 1.obj,2.obj,..,500.obj
     - dimension_size: The size of dimension along one side of the build space
-      - This value will be set to width, length, height
+      - This value will be equally set to width, length, height
     - voxel_size: The size of a unit voxel
       - If voxel_size is 3 and dimension_size is 300, the number of voxels along one side will be 100
     - num_inside: The number representing the complete inside of the 3D model (usually 1 but can be changed)
