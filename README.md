@@ -1,5 +1,5 @@
 # Voxelizer for Additive Manufacutring (VOX4AM)
-- Voxelizer for Additive Manufacutring (VOX4AM) was developed to generate voxelization data for training 3D convolutional neural network (CNN) models that estimate build time for AM. VOX4AM gets more than one mesh files as OBJ format (.obj) and produces a Hierarchical Data Format (HDF) file (.h5). Unlike other conventional voxelizers, VOX4AM takes the build space into consideration because the volume ratio between a mesh model and a build space is a factor that affcts the build time. The software was written in C++.
+- Voxelizer for Additive Manufacutring (VOX4AM) was developed to generate voxelization data for training 3D convolutional neural network (CNN) models that estimate build time for AM. VOX4AM gets more than one mesh files as OBJ format (.obj) and produces a single Hierarchical Data Format (HDF) file (.h5). Unlike other conventional voxelizers, VOX4AM takes the build space into consideration because the volume ratio between a mesh model and a build space is a factor that affcts the build time. The software was written in C++.
 ## Prerequisites
 - [Boost C++ Libraries](https://www.boost.org/) 1.74 or higher
 - [The Computational Geometry Algorithms Library (CGAL)](https://www.cgal.org/download.html) 5.1 or higher for processing mesh files
@@ -25,14 +25,14 @@
       - libhdf5.lib
 ## Usage
 - VOX4AM is a command line software that requires a set of arguments as follows
-  - VOX4AM.exe [folder_path] [obj_size] [dimension_size] [voxel_size] [num_inside]
+  - VOX4AM.exe [folder_path] [obj_size] [dimension_size] [voxel_size] [num_inside] (e.g. VOX4AM.exe C:\folder 500 300 2 1)
     - folder_path: The path where OBJ files are located. Note that obj file names must be numbers
-      - e.g. For 500 objs, the names must be 1.obj,2.obj,..,500.obj
+      - e.g. For 500 obj files, the names must be 1.obj,2.obj,..,500.obj
     - obj_size: The number of obj files at the path
     - dimension_size: The size of dimension along one side of the build space
     - voxel_size: The size of a unit voxel
-    - num_inside: The number representing the complete inside of the model
-      - The numbers representing outside and boundary are 0 and 1
+    - num_inside: The number representing the complete inside of the 3D model
+      - The numbers representing outside and boundary of the 3D model are 0 and 1
 ## Contact Information
 - Soonjo Kwon, soonjo.kwon.1@gmail.com
 ## Version
