@@ -1,4 +1,4 @@
-# Voxelizer for Additive Manufacutring (VOX4AM)
+# 3D Voxelizer for Additive Manufacutring (VOX4AM)
 - Voxelizer for Additive Manufacutring (VOX4AM) was developed to generate voxelization data for training 3D convolutional neural network (CNN) models that estimate build time for AM. VOX4AM gets more than one mesh files as OBJ format (.obj) and produces a single Hierarchical Data Format (HDF) file (.h5). 
 - Unlike other conventional voxelizers, VOX4AM takes the build space into consideration because the volume ratio between a mesh model and a build space is a factor that affcts the build time. 
 - The software was written in C++.
