@@ -33,7 +33,8 @@
   ```
     - folder_path: The path where OBJ files are located
     - obj_size: The number of obj files at the given path
-      - Note that obj file names must be numbers. If there are 500 obj files, the obj file names **MUST** be 1.obj,2.obj,..,500.obj
+      - Note that obj file names must be numbers
+        - If there are 500 obj files, the obj file names **MUST** be 1.obj,2.obj,..,500.obj
     - dimension_size: The size of dimension along one side of the build space
       - This value will be set to width, length, height
     - voxel_size: The size of a unit voxel
