@@ -1,5 +1,5 @@
 # 3D Voxelizer for Additive Manufacutring (VOX4AM)
-- Voxelizer for Additive Manufacutring (VOX4AM) was developed to generate voxelization data for training 3D convolutional neural network (CNN) models that estimate build time for AM. VOX4AM gets more than one mesh files as OBJ format (.obj) and produces a single Hierarchical Data Format (HDF) file (.h5). 
+- Voxelizer for Additive Manufacutring (VOX4AM) was developed to generate voxelization data for training 3D convolutional neural network (CNN) models that estimate build time for AM or 3D printing. VOX4AM gets more than one mesh files as OBJ format (.obj) and produces a single Hierarchical Data Format (HDF) file (.h5). 
 - Unlike other conventional voxelizers, VOX4AM takes the build space into consideration because the volume ratio between a mesh model and a build space is a factor that affcts the build time. 
 - The software was written in C++.
 ## Prerequisites
@@ -27,7 +27,9 @@
       - libhdf5.lib
 ## Usage
 - VOX4AM is a command line software that requires a set of arguments as follows
-  - VOX4AM.exe [folder_path] [obj_size] [dimension_size] [voxel_size] [num_inside] (e.g. VOX4AM.exe C:\folder 500 300 2 1)
+  ```
+  VOX4AM.exe [folder_path] [obj_size] [dimension_size] [voxel_size] [num_inside]
+  ```
     - folder_path: The path where OBJ files are located. Note that obj file names must be numbers
       - e.g. For 500 obj files, the names must be 1.obj,2.obj,..,500.obj
     - obj_size: The number of obj files at the path
