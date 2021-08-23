@@ -47,4 +47,4 @@
 ## Version
 - 1.0
 ## Reference
-- Oh et al., 2021, **Neural network-based build time estimation for additive manufacturing: a performance comparison**, *Journal of Computational Design and Engineering*, To be published.
+- Oh et al., 2021, [**Neural network-based build time estimation for additive manufacturing: a performance comparison**](https://doi.org/10.1093/jcde/qwab044), *Journal of Computational Design and Engineering*, 8(5), 1243–1256.
